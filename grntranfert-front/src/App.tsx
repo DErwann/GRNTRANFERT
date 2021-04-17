@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectItem from "./components/ProjectItem";
 
 import './App.css';
 
@@ -27,19 +28,9 @@ function App() {
             <input type="text" placeholder="montant"/>
         </form>
       <h2>-Liste des projets en cours-</h2>
-        <h4>[nom du projet]</h4><span>[insert localisation]</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam nulla at urna feugiat volutpat.<br/>
-            Maecenas nec euismod metus. Suspendisse molestie volutpat diam ut blandit. Nulla iaculis elit in lectus viverra, <br/>
-            vulputate libero tincidunt. Vestibulum interdum, massa ut aliquet congue, nibh dolor<br/>
-            vulputate magna, in bibendum nunc nisl ac libero. Ut facilisis nec est eu venenatis. Ut at finibus.</p>
-        <h4>[Montant actuel]/[Montant demander]</h4> <span>[insert pourcentage]</span>
-
-        <h4>[nom du projet]</h4><span>[insert localisation]</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam nulla at urna feugiat volutpat.<br/>
-            Maecenas nec euismod metus. Suspendisse molestie volutpat diam ut blandit. Nulla iaculis elit in lectus viverra, <br/>
-            vulputate libero tincidunt. Vestibulum interdum, massa ut aliquet congue, nibh dolor<br/>
-            vulputate magna, in bibendum nunc nisl ac libero. Ut facilisis nec est eu venenatis. Ut at finibus.</p>
-        <h4>[Montant actuel]/[Montant demander]</h4> <span>[insert pourcentage]</span>
+        <ProjectItem/>
+        <ProjectItem/>
+        <ProjectItem/>
 
 
     </div>
