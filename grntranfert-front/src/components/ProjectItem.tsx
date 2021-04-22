@@ -1,14 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
+import ProjectListItem from "../Data/ProjectListItem";
 
-const ProjectItem = () => {
+export  interface props {
+    projectAllProps : ProjectListItem;
+    
+}
+
+const ProjectItem = ({projectAllProps}:props) => {
+
+
+    const [projectItem, setProjecItem] = useState(projectAllProps);
 
     return(<>
-            <h4>[nom du projet]</h4><span>[insert localisation]</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam nulla at urna feugiat volutpat.<br/>
-                Maecenas nec euismod metus. Suspendisse molestie volutpat diam ut blandit. Nulla iaculis elit in lectus viverra, <br/>
-                vulputate libero tincidunt. Vestibulum interdum, massa ut aliquet congue, nibh dolor<br/>
-                vulputate magna, in bibendum nunc nisl ac libero. Ut facilisis nec est eu venenatis. Ut at finibus.</p>
-            <h4>[Montant actuel]/[Montant demander]</h4> <span>[insert pourcentage]</span>
+            <h4>{projectItem.projectTitle}</h4><span>{projectItem.localisation}</span>
+            <p>{projectItem.description}</p>
+            <h4>[Montant actuel]/{projectItem.objectif}</h4> <span>[insert pourcentage]</span>
         </>
 
     )
