@@ -1,6 +1,7 @@
 export default interface ProjectListItem{
-    projectTitle : string;
-    localisation : string;
-    description : string;
-    objectif : number;
+    project_id:number
+    project_title : string;
+    project_localisation : string;
+    project_description : string;
+    project_objectif : number;
 }
