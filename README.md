@@ -26,8 +26,8 @@ GET :
 `http://localhost:8080/apiGRN/getAllProjects` pour avoir la liste de tous les projects 
 
 POST : 
-`http://localhost:8080/apiGRN/addTransaction?sender={senderadress}&receiver={receiveradress]&amount={amount}` pour enregistrer une transaction
-`http://localhost:8080/apiGRN/addProject?title={titre}&localisation={localisation}&description={description}&objectif={objectif}` pour enregistrer un projet 
+`http://localhost:8080/apiGRN/addTransaction?sender={senderadress}&receiver={receiveradress]&amount={amount}` pour enregistrer une transaction \
+`http://localhost:8080/apiGRN/addProject?title={titre}&localisation={localisation}&description={description}&objectif={objectif}` pour enregistrer un projet \
 
 DELETE : 
 `http://localhost:8080/apiGRN/delProject/{id}` supprime le project avec l'id (cette commande n'est pas deployé dans le front)
