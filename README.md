@@ -1,8 +1,12 @@
 # Utilisation de GRN Tranfert 
 
+Pour télécharger le document, vous devez ouvrir votre terminal de commande puis réaliser la commande\
+`git clone https://github.com/DErwann/GRNTRANFERT.git`
+Vous aurez ainsi le dossier du github
+
 
 ## ATTENTION
-Pour que l'application web fonctionne il vous faudra faire quelque manipulation au préalable: 
+Pour que l'application web fonctionne il vous faudra faire quelques manipulations au préalable: 
 
 ### 1er Mise en place de la base de données sur MySQL 
 Executez les commandes suivante dans le terminal de MySqL Command Line Client \
@@ -13,7 +17,7 @@ Créer un user pour spring :\
 Puis accorder les accès à cet user : \
 `grant all on db_grntransfertv3.* to 'springuser'@'%';`
 
-## Pur lancer le back du projet 
+## Pour lancer le back du projet 
 
 Vous devrez executer la commande dans le dossier testtablesmultiples :\
 `mvnw spring-boot:run` \
@@ -26,8 +30,8 @@ GET :
 `http://localhost:8080/apiGRN/getAllProjects` pour avoir la liste de tous les projects 
 
 POST : 
-`http://localhost:8080/apiGRN/addTransaction?sender={senderadress}&receiver={receiveradress]&amount={amount}` pour enregistrer une transaction
-`http://localhost:8080/apiGRN/addProject?title={titre}&localisation={localisation}&description={description}&objectif={objectif}` pour enregistrer un projet 
+`http://localhost:8080/apiGRN/addTransaction?sender={senderadress}&receiver={receiveradress]&amount={amount}` pour enregistrer une transaction \
+`http://localhost:8080/apiGRN/addProject?title={titre}&localisation={localisation}&description={description}&objectif={objectif}` pour enregistrer un projet \
 
 DELETE : 
 `http://localhost:8080/apiGRN/delProject/{id}` supprime le project avec l'id (cette commande n'est pas deployé dans le front)
@@ -35,6 +39,10 @@ DELETE :
 ## Pour lancer le front
 
 vous devrez lancer comme commande dans le terminal de ce dossier `grntranfert_front`
+
+### Attention lors du premier lancement, il faut changer une valeur pour mettre en place la BDD, il faut ce rendre dans le fichier 
+src\main\resources\application.proprerties 
+`spring.jpa.hibernate.ddl-auto=create ` cette commande permet créer la base de données mais après le premier lancement il faut mettre cette valeur à `none`,sinon la base de donnée va se réécrire à chaque lancement et donc entrainer la perte de données.
 
 ### `npm start`
 
