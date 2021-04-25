@@ -57,4 +57,18 @@ puis réesayez `npm start`
 
 vous pouvez écrire des projets et ils seront enregistrés dans la base de données
 
+## Pour lancer la Dapp
+Etant donné que la Dapp est déployé sur un réseau test et que l'ajout de client et commerçant n'a pas été encore effectué, il faudra pour expérimenter le processus de transaction mettre en place un réseau test à l'aide de Ropsten. Cependant vous pouvez avoir un aperçu par le lien https://oneclickdapp.com/zoom-clock
 
+- Se munir de l'extension http://metamask.io/
+- Par la suite changer sur le réseau Ropsten
+- Créer trois comptes : Le client, le marchant et enfin la cagnotte
+- Aller sur "", pour approvisionner le compte client dans le but de déployer le smart contract
+Une fois ceci réalisé, nous pouvons déployer le smart contract à l'aide de https://oneclickdapp.com/.
+- Ouvrir sur l'ide en ligne https://remix.ethereum.org/ le fichier LOKO.sol
+- Compiler le smart contract
+- Pour le déploiement, sélectionner l'environnement : "Injected Web3", sélectionner l'adresse du compte crédité, sélectionner le contrat "LOKOToken - LOKO.sol" et enfin déployer le smart contract.
+Il ne reste plus que le déploiement de la Dapp à l'aide de l'extension sur remix OneClickDapp. Pour créer la Dapp il suffit de l'adresse de déploiement. Une fois le lien url généré, il est possible d'y accéder et intéragir avec le système en se connectant sur le compte client.
+
+## Pour La distribution des tokens de la cagnotte certifié vers les commerçants
+Pour visualiser la distribution, if faut ouvrir le fichier PoolDitribution.ipynb dans le dossier distribution_cagnotte.
