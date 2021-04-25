@@ -1,0 +1,14 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+h4{
+   font-size: large;
+}
+div span {
+    font-size: medium;
+}
+
+h5 {
+    font-weight: bold;
+}

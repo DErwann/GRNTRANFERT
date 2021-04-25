@@ -15,19 +15,20 @@ const ProjectItem = ({projectAllProps}:props) => {// on défini la class du comp
     const addUp = ()=>{ //fonction qui permet de comptabiliser tout les up pour le projet selectionné
         setcountUp(countUp+1)
     }
-    /*const test = () =>{
+    const test = () =>{
         console.log('test list 1',projectItem)
         console.log('test list props titre',projectAllProps)
-        console.log('test titre',projectItem.projectTitle)
-    }*/
+    }
 
     return(<>
-            <h4>{projectItem.project_title}</h4><span>{projectItem.project_localisation}</span>
+            <div><h4>{projectItem.project_title}</h4><span> | {projectItem.project_localisation}</span>
+            </div>
             <p>{projectItem.project_description}</p>
-            <h4>[connection needed]/{projectItem.project_objectif} €</h4>
+            <h5>{projectItem.project_objectif} €</h5>
             <button onClick={addUp}>
                 Up the project</button>
             <span>{countUp}</span>
+            <button onClick={test}>test</button>
         </>
 
     )

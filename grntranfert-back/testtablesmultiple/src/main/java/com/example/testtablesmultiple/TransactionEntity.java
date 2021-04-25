@@ -2,6 +2,17 @@ package com.example.testtablesmultiple;
 
 
 import javax.persistence.*;
+//Ce fichier permet de mettre en place la table transactions :
+/*
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | bigint       | NO   | PRI | NULL    | auto_increment |
+| amount   | int          | YES  |     | NULL    |                |
+| receiver | varchar(255) | YES  |     | NULL    |                |
+| sender   | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+ */
 
 @Entity
 @Table(name = "transactions")
@@ -20,6 +31,7 @@ public class TransactionEntity {
     @Column(name="amount")
     Integer amount;
 
+    // les setters et les getters
     public Long getId() {
         return id;
     }

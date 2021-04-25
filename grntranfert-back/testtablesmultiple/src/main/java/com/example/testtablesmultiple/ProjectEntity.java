@@ -2,7 +2,16 @@ package com.example.testtablesmultiple;
 
 
 import javax.persistence.*;
-
+//Ce fichier met en place la table projects
+/*+--------------+--------------+------+-----+---------+----------------+
+        | Field        | Type         | Null | Key | Default | Extra          |
+        +--------------+--------------+------+-----+---------+----------------+
+        | project_id   | bigint       | NO   | PRI | NULL    | auto_increment |
+        | localisation | varchar(255) | YES  |     | NULL    |                |
+        | objectif     | int          | YES  |     | NULL    |                |
+        | title        | varchar(255) | YES  |     | NULL    |                |
+        | description  | varchar(255) | YES  |     | NULL    |                |
+        +--------------+--------------+------+-----+---------+----------------+*/
 @Entity
 @Table(name = "projects")
 public class ProjectEntity {
@@ -23,6 +32,8 @@ public class ProjectEntity {
     @Column(name="objectif")
     Integer project_objectif;
 
+
+    // les setters et les getters
     public Long getProject_id() {
         return project_id;
     }

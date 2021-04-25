@@ -42,6 +42,12 @@ const App : React.FC = () => {
             })
 
     }
+    const addTransaction=()=>{ //fonction qui permet d'enregistrer une transaction dans la data base
+        fetch(`http://localhost:8080/apiGRN/addTransaction?sender=${senderAdress}&receiver=${receiverAdress}&amount=${transfertAmount}`,
+            {
+                method:'POST'
+            }).then(response => response.json())
+    }
 
     const changeHandlerTransaction = (event: ChangeEvent<HTMLInputElement>):void =>{ //Fonction qui permet de repérer les changements dans le input de la transaction pour directement les enregistrer dans les hooks
         if(event.target.name==='sender'){setSenderAdress(event.target.value);console.log(senderAdress)}
@@ -84,7 +90,7 @@ const App : React.FC = () => {
                    value={transfertAmount}
                     onChange={changeHandlerTransaction}/>
         </form>
-        <button>faire la transaction</button>
+        <button onClick={addTransaction}>faire la transaction</button>
       <h2>-Enregistrer un nouveau projet-</h2>
         <form>
             <h3>Nom du projet</h3>
