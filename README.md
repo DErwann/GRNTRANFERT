@@ -1,7 +1,8 @@
 # Utilisation de GRN Tranfert 
 
 Pour télécharger le document, vous devez ouvrir votre terminal de commande puis réaliser la commande\
-`git clone`
+`git clone https://github.com/DErwann/GRNTRANFERT.git`
+Vous aurez ainsi le dossier du github
 
 
 ## ATTENTION
