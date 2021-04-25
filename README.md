@@ -36,6 +36,10 @@ DELETE :
 
 vous devrez lancer comme commande dans le terminal de ce dossier `grntranfert_front`
 
+### Attention lors du premier lancement, il faut changer une valeur pour mettre en place la BDD, il faut ce rendre dans le fichier 
+src\main\resources\application.proprerties 
+`spring.jpa.hibernate.ddl-auto=create ` cette commande permet créer la base de données mais après le premier lancement il faut mettre cette valeur à none,sinon la base de donnée va se réécrire à chaque lancement et donc entrainer la perte de données.
+
 ### `npm start`
 
 Pour visualiser le front il faudra ce rendre dans votre navigateur 
