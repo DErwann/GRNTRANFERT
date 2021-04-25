@@ -1,5 +1,8 @@
 # Utilisation de GRN Tranfert 
 
+Pour télécharger le document, vous devez ouvrir votre terminal de commande puis réaliser la commande\
+`git clone`
+
 
 ## ATTENTION
 Pour que l'application web fonctionne il vous faudra faire quelque manipulation au préalable: 
